@@ -36,14 +36,43 @@
 
         function unaFuncionQueDevuelveValor(){
             console.log("Uno");
+
+            // Una vez que el código encuentre la palabra return va a ignorar el contenido que se encuentra debajo
+            return 19;
+
             console.log("Dos");
             console.log("Tres");
 
             return "La funcion ha retornado una cadena de texto";
         }
 
-        unaFuncionQueDevuelveValor();
+        //let valorDeFuncion = unaFuncionQueDevuelveValor();
+        //console.log(valorDeFuncion);
 
+        function saludar(nombre = "Desconocido", edad = 0){
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`);
+        }        
+
+        //saludar("Luna", 7);
+        //saludar();
+
+        funcionDeclarada();
+
+        //Funciones declaradas VS funciones expresadas
+        function funcionDeclarada(){
+            console.log("Esto es una funcion declarada, puede invocarse en cualquier parte de nuentro código, incluso antes de que la funcion sea declarada");
+        }
+
+        funcionDeclarada();
+
+        //Funcion Anomima
+        //funcionExpresada();
+
+        const funcionExpresada = function (){
+            console.log("Esto es una funcion expresada, es decir, una función que se le ha asignado como valor a una variable,si invocamos esta función antes de su definición JS nos dira...")
+        }
+
+        funcionExpresada();
         
     </script>
 </head>
