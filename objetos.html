@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+
+    <script>
+
+        //En JavaScript todo es un objeto, un objeto es una colección de llaves y valores
+
+        let a = new String("Hola");
+        console.log(a);
+
+        //Declaración de objeto
+        const b = {}
+        console.log(b);
+
+        //Otra forma de declarar un objeto, este método ya no es tan usado
+        const c = new Object();
+        console.log(c);
+
+        //Dentro de un objeto a las variables se les van a llamar atributos y a las funciones se les llama métodos
+        const duvan = {
+            nombre: "Duvan",
+            apellido: "Giovanni",
+            edad: 24,
+            pasatiempos: ["Correr", "Hacer ejercicios", "Diseñar"],//Declarado de modo arreglo
+            soltero: false,
+
+            //Decalrado modo objeto
+            contacto: {
+                email: "duvanprogrammer@gmail.com",
+                instagram: "giooo_r",
+                movil: "+573207688750",
+            },
+
+            //La funcion ya no es un atributo del objeto, es un método o funcion
+            saludar: function(){
+                console.log(`Hola :)`);
+            },
+
+            decirMiNombre: function(){
+                //concatenando variables
+                console.log(`Hola, mi nombre es ${this.nombre} ${this.apellido} y tengo ${this.edad} años, y me puedes seguir como ${this.contacto.instagram} en instagram`);
+            }
+        }
+
+        console.log(duvan);
+
+        //Ingresando a los datos del objeto por medio de corchetes, no es tan usada
+        console.log(duvan["nombre"]);
+        console.log(duvan["apellido"]);
+
+        //Ingresando a travez de la notación del punto, la más usada
+        console.log(duvan.nombre);
+        console.log(duvan.apellido);
+        console.log(duvan.edad);
+        console.log(duvan.soltero);
+        console.log(duvan.pasatiempos);
+        console.log(duvan.pasatiempos[1]);
+        console.log(duvan.contacto);
+        console.log(duvan.contacto.instagram);
+
+        duvan.saludar();
+        duvan.decirMiNombre();
+
+        //Propiedad Object para enumerar llaves del Objeto
+        console.log(Object.keys(duvan));
+
+        //Valores
+        console.log(Object.values(duvan));
+
+        //Método para saber si existe la propiedad nombre en el objeto duvan
+        console.log(duvan.hasOwnProperty("nombre"));
+        console.log(duvan.hasOwnProperty("nacimiento"));
+
+
+    </script>
+    
+</body>
+</html>
