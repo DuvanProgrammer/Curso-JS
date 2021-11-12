@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        const numbers = [1,2,3];
+
+        // Sin destructuración
+        let one = numbers[0],
+            two = numbers[1],
+            three = numbers[2];
+
+        console.log(one , two, three);
+
+        // Con destructiración
+        const [uno, dos, tres] = numbers;
+        console.log(uno, dos, tres);
+        
+        const person = {
+            name : "Giovanni",
+            lastName : "Rodríguez",
+            age : 24
+
+        }
+
+        // La declaración de la variable busca el mismo nombre declarado en el objeto
+        let {name, lastName, age} = person;
+        console.log(name, lastName, age);
+    </script>
+</body>
+</html>
